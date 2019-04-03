@@ -53,7 +53,9 @@ while True:
                     elif ptotal <= 21 and dtotal > 21:
                         print('You win')
                         sys.exit()
-                
+                    elif dtotal == 21 and ptotal < 21:
+                        print('You lose')
+                        sys.exit()                
             
             
             
