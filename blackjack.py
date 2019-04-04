@@ -21,12 +21,15 @@ def incPhand(ptotal):
 def whois(ptotal, dtotal):
     if ptotal <= 21 and ptotal > dtotal:
         return 'You win'
+    elif dtotal > 21 and ptotal > 21:
+        return 'Nobody wins'
     elif ptotal > 21:
         return 'You lose'
     elif ptotal <= 21 and dtotal > 21:
         return 'You win'
     elif dtotal == 21 and ptotal < 21:
         return 'You lose'
+    
 
 
 ptotal=0
@@ -74,9 +77,6 @@ while True:
                 print(winner)
                 sys.exit()
             
-winner=whois(ptotal, dtotal)
-print(winner)
-sys.exit()
         
             
             
