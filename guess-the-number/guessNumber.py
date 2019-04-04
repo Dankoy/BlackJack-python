@@ -16,5 +16,9 @@ cNum = random.randint(1, 10)
 
 while True:
     print('Take a guess:')
-    myNum=input()
-    checkNum(int(myNum))
+    try:
+        myNum=input()
+        checkNum(int(myNum))
+    except ValueError:
+        print('You must enter integers!')
+    
