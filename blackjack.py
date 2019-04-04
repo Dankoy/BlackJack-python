@@ -60,7 +60,10 @@ while True:
                 elif panswer == 'no':
                     dtotal=incDhand(dtotal)
                     print('Dealer\'s hand ' + str(dtotal))
-            
+                else:
+                    print('NOTE: You have two options: yes or no\n')
+                    continue
+                
                 print('\nTotal hands:\nYour\'s ' + str(ptotal) + '\nDealer\'s ' + str(dtotal))
             
         elif panswer == 'no':
@@ -72,3 +75,7 @@ while True:
                 winner=whois(ptotal, dtotal)
                 print(winner)
                 sys.exit()
+                
+        else:
+            print('NOTE: You have two options: yes or no\n')
+            continue
