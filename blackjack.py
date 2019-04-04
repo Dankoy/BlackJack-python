@@ -1,5 +1,4 @@
 #Simple program to play black jack
- 
 import random, sys
 
 # Method to increase dealer's hand
@@ -30,8 +29,6 @@ def whois(ptotal, dtotal):
     elif dtotal == 21 and ptotal < 21:
         return 'You lose'
     
-
-
 ptotal=0
 dtotal=0
 
@@ -45,7 +42,6 @@ while True:
     
     print('Your hand: ' + str(ptotal))
     print('Dealer\'s hand: ' + str(dtotal))
-    
     
     while True:
         print('Do you need more? Type yes or no')
@@ -76,12 +72,3 @@ while True:
                 winner=whois(ptotal, dtotal)
                 print(winner)
                 sys.exit()
-            
-        
-            
-            
-            
-            
-            
-            
-            
