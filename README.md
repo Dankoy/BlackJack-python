@@ -1,2 +1,1 @@
-# BlackJack-python
-Simple blackjack game written on python
+Study python here
