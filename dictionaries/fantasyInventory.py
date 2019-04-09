@@ -24,7 +24,7 @@ def insertInv(item, qt, inv):
 while True:
     print('What do you want to do? Insert, check, or nothing to leave')
     answer = input()
-    if answer.lower() == 'check':
+    if answer.lower() == 'check full':
         print('Your inventory:')
         checkFullInv(inventory)
     elif answer.lower() == 'insert':
@@ -33,5 +33,9 @@ while True:
         print('How many?')
         quantity = input()
         insertInv(it, quantity, inventory)
+    elif answer.lower() == 'check item':
+        print('What item you want to check?')
+        it = input()
+        print(checkItemInv(it, inventory))
     else:
         break
