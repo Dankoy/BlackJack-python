@@ -1,7 +1,12 @@
  
 import tarfile, shutil, os
 
-for i in range(10):
+out1 = tarfile.open('tarfile.tar', 'r')
+name = out1.getnames()
+name = ''.join(name)
+print(name)
+while name == './tarfile.tar':
+    name = ''
     shutil.move('./tarfile.tar', './tarfile.tar.tmp')
     out = tarfile.open('tarfile.tar.tmp', 'r')
     for j in out.getnames():
@@ -9,5 +14,10 @@ for i in range(10):
         f = out.extract(j, './')
     out.close()
     os.unlink('./tarfile.tar.tmp')
+    
+    out1 = tarfile.open('tarfile.tar', 'r')
+    name = out1.getnames()
+    name = ''.join(name)
+    
 
  
