@@ -29,6 +29,18 @@ openFile.close()
 openFile = open('/home/ezelenin/git/python-learning/Files/hello.txt', 'r')
 readFile = openFile.readlines()
 print(readFile)
+openFile.close()
+
+# Append to File
+openFile = open('/home/ezelenin/git/python-learning/Files/append.txt', 'a')
+openFile.write('New line to be written here2\n')
+openFile.close()
+openFile = open('/home/ezelenin/git/python-learning/Files/append.txt', 'r')
+readFile = openFile.readlines()
+openFile.close()
+print(readFile)
+
+
 
 
 
