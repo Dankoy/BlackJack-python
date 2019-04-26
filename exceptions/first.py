@@ -1,7 +1,7 @@
  
 import sys, logging
 
-logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(levelname)s- %(message)s')
+logging.basicConfig(filename='debug.log',level=logging.DEBUG, format=' %(asctime)s - %(levelname)s- %(message)s')
 logging.debug('Start of program')
 
 def boxPrint(symbol, width, height):
